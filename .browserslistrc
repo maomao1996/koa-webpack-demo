@@ -1,0 +1,5 @@
+[production]
+>0.2%
+
+[development]
+last 1 version

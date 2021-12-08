@@ -4,7 +4,7 @@
   "private": true,
   "description": "Koa2 Webpack5 项目",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./scripts/dev-server.js"
   },
   "author": "maomao1996 <1714487678@qq.com>",
   "repository": {
@@ -14,5 +14,26 @@
   "bugs": {
     "url": "https://github.com/maomao1996/koa-webpack-demo/issues"
   },
-  "homepage": "https://github.com/maomao1996/koa-webpack-demo#readme"
+  "homepage": "https://github.com/maomao1996/koa-webpack-demo#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "dotenv": "^10.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "koa": "^2.13.4",
+    "postcss-loader": "^6.2.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.2",
+    "webpack-merge": "^5.8.0"
+  }
 }
