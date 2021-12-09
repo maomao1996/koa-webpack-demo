@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': ^7.16.0
   '@babel/preset-env': ^7.16.4
   '@babel/preset-react': ^7.16.0
+  '@pmmmwh/react-refresh-webpack-plugin': ^0.5.3
   autoprefixer: ^10.4.0
   babel-loader: ^8.2.3
   css-loader: ^6.5.1
@@ -13,10 +14,12 @@ specifiers:
   postcss-loader: ^6.2.1
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-refresh: ^0.11.0
   style-loader: ^3.3.1
   webpack: ^5.65.0
   webpack-cli: ^4.9.1
   webpack-dev-middleware: ^5.2.2
+  webpack-hot-middleware: ^2.25.1
   webpack-merge: ^5.8.0
 
 dependencies:
@@ -27,6 +30,7 @@ devDependencies:
   '@babel/core': 7.16.0
   '@babel/preset-env': 7.16.4_@babel+core@7.16.0
   '@babel/preset-react': 7.16.0_@babel+core@7.16.0
+  '@pmmmwh/react-refresh-webpack-plugin': 0.5.3_ab16c304cd135cfd20a7e932095c044f
   autoprefixer: 10.4.0
   babel-loader: 8.2.3_8dd2b11efd9b7265f9b7da54f0e73ab1
   css-loader: 6.5.1_webpack@5.65.0
@@ -34,10 +38,12 @@ devDependencies:
   html-webpack-plugin: 5.5.0_webpack@5.65.0
   koa: 2.13.4
   postcss-loader: 6.2.1_webpack@5.65.0
+  react-refresh: 0.11.0
   style-loader: 3.3.1_webpack@5.65.0
   webpack: 5.65.0_webpack-cli@4.9.1
   webpack-cli: 4.9.1_webpack@5.65.0
   webpack-dev-middleware: 5.2.2_webpack@5.65.0
+  webpack-hot-middleware: 2.25.1
   webpack-merge: 5.8.0
 
 packages:
@@ -1230,6 +1236,46 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
+  /@pmmmwh/react-refresh-webpack-plugin/0.5.3_ab16c304cd135cfd20a7e932095c044f:
+    resolution: {integrity: sha512-OoTnFb8XEYaOuMNhVDsLRnAO6MCYHNs1g6d8pBcHhDFsi1P3lPbq/IklwtbAx9cG0W4J9KswxZtwGnejrnxp+g==, tarball: '@pmmmwh/react-refresh-webpack-plugin/download/@pmmmwh/react-refresh-webpack-plugin-0.5.3.tgz'}
+    engines: {node: '>= 10.13'}
+    peerDependencies:
+      '@types/webpack': 4.x || 5.x
+      react-refresh: '>=0.10.0 <1.0.0'
+      sockjs-client: ^1.4.0
+      type-fest: '>=0.17.0 <3.0.0'
+      webpack: '>=4.43.0 <6.0.0'
+      webpack-dev-server: 3.x || 4.x
+      webpack-hot-middleware: 2.x
+      webpack-plugin-serve: 0.x || 1.x
+    peerDependenciesMeta:
+      '@types/webpack':
+        optional: true
+      sockjs-client:
+        optional: true
+      type-fest:
+        optional: true
+      webpack-dev-server:
+        optional: true
+      webpack-hot-middleware:
+        optional: true
+      webpack-plugin-serve:
+        optional: true
+    dependencies:
+      ansi-html-community: 0.0.8
+      common-path-prefix: 3.0.0
+      core-js-pure: 3.19.3
+      error-stack-parser: 2.0.6
+      find-up: 5.0.0
+      html-entities: 2.3.2
+      loader-utils: 2.0.2
+      react-refresh: 0.11.0
+      schema-utils: 3.1.1
+      source-map: 0.7.3
+      webpack: 5.65.0_webpack-cli@4.9.1
+      webpack-hot-middleware: 2.25.1
+    dev: true
+
   /@types/eslint-scope/3.7.1:
     resolution: {integrity: sha1-jcOQp7T53Z8ShGKe/OmC5BYSEW4=, tarball: '@types/eslint-scope/download/@types/eslint-scope-3.7.1.tgz'}
     dependencies:
@@ -1253,7 +1299,7 @@ packages:
     dev: true
 
   /@types/json-schema/7.0.9:
-    resolution: {integrity: sha1-l+3JA36gw4WFMgsolk3eOznkZg0=, tarball: '@types/json-schema/download/@types/json-schema-7.0.9.tgz'}
+    resolution: {integrity: sha1-l+3JA36gw4WFMgsolk3eOznkZg0=, tarball: '@types/json-schema/download/@types/json-schema-7.0.9.tgz?cache=0&sync_timestamp=1637272400115&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fjson-schema%2Fdownload%2F%40types%2Fjson-schema-7.0.9.tgz'}
     dev: true
 
   /@types/node/16.11.12:
@@ -1475,6 +1521,12 @@ packages:
       uri-js: 4.4.1
     dev: true
 
+  /ansi-html-community/0.0.8:
+    resolution: {integrity: sha1-afvE1sy+OD+XNpNK40w/gpDxv0E=, tarball: ansi-html-community/download/ansi-html-community-0.0.8.tgz}
+    engines: {'0': node >= 0.8.0}
+    hasBin: true
+    dev: true
+
   /ansi-regex/5.0.1:
     resolution: {integrity: sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ=, tarball: ansi-regex/download/ansi-regex-5.0.1.tgz}
     engines: {node: '>=8'}
@@ -1677,6 +1729,10 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
+  /common-path-prefix/3.0.0:
+    resolution: {integrity: sha1-fQB6fgfFjEtNX0MxMaGRQbKfEeA=, tarball: common-path-prefix/download/common-path-prefix-3.0.0.tgz}
+    dev: true
+
   /commondir/1.0.1:
     resolution: {integrity: sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=, tarball: commondir/download/commondir-1.0.1.tgz}
     dev: true
@@ -1712,6 +1768,11 @@ packages:
     dependencies:
       browserslist: 4.18.1
       semver: 7.0.0
+    dev: true
+
+  /core-js-pure/3.19.3:
+    resolution: {integrity: sha512-N3JruInmCyt7EJj5mAq3csCgGYgiSqu7p7TQp2KOztr180/OAIxyIvL1FCjzgmQk/t3Yniua50Fsak7FShI9lA==, tarball: core-js-pure/download/core-js-pure-3.19.3.tgz}
+    requiresBuild: true
     dev: true
 
   /cosmiconfig/7.0.1:
@@ -1900,6 +1961,12 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
+  /error-stack-parser/2.0.6:
+    resolution: {integrity: sha1-WpmnB716TFinl5AtSNgoA+3mqtg=, tarball: error-stack-parser/download/error-stack-parser-2.0.6.tgz}
+    dependencies:
+      stackframe: 1.2.0
+    dev: true
+
   /es-module-lexer/0.9.3:
     resolution: {integrity: sha1-bxPbAMw4QXE32vdDZvU1yOtDjxk=, tarball: es-module-lexer/download/es-module-lexer-0.9.3.tgz}
     dev: true
@@ -1997,6 +2064,14 @@ packages:
       path-exists: 4.0.0
     dev: true
 
+  /find-up/5.0.0:
+    resolution: {integrity: sha1-TJKBnstwg1YeT0okCoa+UZj1Nvw=, tarball: find-up/download/find-up-5.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      locate-path: 6.0.0
+      path-exists: 4.0.0
+    dev: true
+
   /fraction.js/4.1.2:
     resolution: {integrity: sha512-o2RiJQ6DZaR/5+Si0qJUIy637QMRudSi9kU/FFzx9EZazrIdnBgpU+3sEWCxAVhH2RtxW2Oz+T4p2o8uOPVcgA==, tarball: fraction.js/download/fraction.js-4.1.2.tgz}
     dev: true
@@ -2077,6 +2152,10 @@ packages:
   /he/1.2.0:
     resolution: {integrity: sha1-hK5l+n6vsWX922FWauFLrwVmTw8=, tarball: he/download/he-1.2.0.tgz}
     hasBin: true
+    dev: true
+
+  /html-entities/2.3.2:
+    resolution: {integrity: sha1-dgtARoXLHXlOT0t0QzLjsA3P5Ig=, tarball: html-entities/download/html-entities-2.3.2.tgz}
     dev: true
 
   /html-minifier-terser/6.1.0:
@@ -2349,11 +2428,27 @@ packages:
       json5: 1.0.1
     dev: true
 
+  /loader-utils/2.0.2:
+    resolution: {integrity: sha1-1uO0+4GHByGuTghoqxHdY4NowSk=, tarball: loader-utils/download/loader-utils-2.0.2.tgz?cache=0&sync_timestamp=1636690676437&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Floader-utils%2Fdownload%2Floader-utils-2.0.2.tgz}
+    engines: {node: '>=8.9.0'}
+    dependencies:
+      big.js: 5.2.2
+      emojis-list: 3.0.0
+      json5: 2.2.0
+    dev: true
+
   /locate-path/5.0.0:
     resolution: {integrity: sha1-Gvujlq/WdqbUJQTQpno6frn2KqA=, tarball: locate-path/download/locate-path-5.0.0.tgz}
     engines: {node: '>=8'}
     dependencies:
       p-locate: 4.1.0
+    dev: true
+
+  /locate-path/6.0.0:
+    resolution: {integrity: sha1-VTIeswn+u8WcSAHZMackUqaB0oY=, tarball: locate-path/download/locate-path-6.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      p-locate: 5.0.0
     dev: true
 
   /lodash.debounce/4.0.8:
@@ -2521,11 +2616,25 @@ packages:
       p-try: 2.2.0
     dev: true
 
+  /p-limit/3.1.0:
+    resolution: {integrity: sha1-4drMvnjQ0TiMoYxk/qOOPlfjcGs=, tarball: p-limit/download/p-limit-3.1.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      yocto-queue: 0.1.0
+    dev: true
+
   /p-locate/4.1.0:
     resolution: {integrity: sha1-o0KLtwiLOmApL2aRkni3wpetTwc=, tarball: p-locate/download/p-locate-4.1.0.tgz}
     engines: {node: '>=8'}
     dependencies:
       p-limit: 2.3.0
+    dev: true
+
+  /p-locate/5.0.0:
+    resolution: {integrity: sha1-g8gxXGeFAF470CGDlBHJ4RDm2DQ=, tarball: p-locate/download/p-locate-5.0.0.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      p-limit: 3.1.0
     dev: true
 
   /p-try/2.2.0:
@@ -2686,6 +2795,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /querystring/0.2.1:
+    resolution: {integrity: sha1-QNd2FbsJ0WkCqFw+OKqLXtdhwt0=, tarball: querystring/download/querystring-0.2.1.tgz}
+    engines: {node: '>=0.4.x'}
+    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+    dev: true
+
   /randombytes/2.1.0:
     resolution: {integrity: sha1-32+ENy8CcNxlzfYpE0mrekc9Tyo=, tarball: randombytes/download/randombytes-2.1.0.tgz}
     dependencies:
@@ -2707,6 +2822,11 @@ packages:
       react: 17.0.2
       scheduler: 0.20.2
     dev: false
+
+  /react-refresh/0.11.0:
+    resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==, tarball: react-refresh/download/react-refresh-0.11.0.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
 
   /react/17.0.2:
     resolution: {integrity: sha1-0LXMUW0p6z7uOD91tihkz7aAADc=, tarball: react/download/react-17.0.2.tgz}
@@ -2919,13 +3039,17 @@ packages:
     dev: true
 
   /source-map/0.6.1:
-    resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=, tarball: source-map/download/source-map-0.6.1.tgz?cache=0&sync_timestamp=1632822727980&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsource-map%2Fdownload%2Fsource-map-0.6.1.tgz}
+    resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=, tarball: source-map/download/source-map-0.6.1.tgz}
     engines: {node: '>=0.10.0'}
     dev: true
 
   /source-map/0.7.3:
-    resolution: {integrity: sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=, tarball: source-map/download/source-map-0.7.3.tgz?cache=0&sync_timestamp=1632822727980&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsource-map%2Fdownload%2Fsource-map-0.7.3.tgz}
+    resolution: {integrity: sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=, tarball: source-map/download/source-map-0.7.3.tgz}
     engines: {node: '>= 8'}
+    dev: true
+
+  /stackframe/1.2.0:
+    resolution: {integrity: sha1-UkKUktY8YuuYmATBFVLj0i53kwM=, tarball: stackframe/download/stackframe-1.2.0.tgz}
     dev: true
 
   /statuses/1.5.0:
@@ -2934,7 +3058,7 @@ packages:
     dev: true
 
   /strip-ansi/6.0.1:
-    resolution: {integrity: sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk=, tarball: strip-ansi/download/strip-ansi-6.0.1.tgz}
+    resolution: {integrity: sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk=, tarball: strip-ansi/download/strip-ansi-6.0.1.tgz?cache=0&sync_timestamp=1632822728166&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fstrip-ansi%2Fdownload%2Fstrip-ansi-6.0.1.tgz}
     engines: {node: '>=8'}
     dependencies:
       ansi-regex: 5.0.1
@@ -3156,6 +3280,15 @@ packages:
       webpack: 5.65.0_webpack-cli@4.9.1
     dev: true
 
+  /webpack-hot-middleware/2.25.1:
+    resolution: {integrity: sha1-WB9Z7fB4F0P0ykwgD9MskmbGz3w=, tarball: webpack-hot-middleware/download/webpack-hot-middleware-2.25.1.tgz}
+    dependencies:
+      ansi-html-community: 0.0.8
+      html-entities: 2.3.2
+      querystring: 0.2.1
+      strip-ansi: 6.0.1
+    dev: true
+
   /webpack-merge/5.8.0:
     resolution: {integrity: sha1-Kznb8ir4d3atdEw5AiNzHTCmj2E=, tarball: webpack-merge/download/webpack-merge-5.8.0.tgz}
     engines: {node: '>=10.0.0'}
@@ -3234,4 +3367,9 @@ packages:
   /ylru/1.2.1:
     resolution: {integrity: sha1-9Xa2M0FUeYnB3nuiiHYJI7J/6E8=, tarball: ylru/download/ylru-1.2.1.tgz}
     engines: {node: '>= 4.0.0'}
+    dev: true
+
+  /yocto-queue/0.1.0:
+    resolution: {integrity: sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=, tarball: yocto-queue/download/yocto-queue-0.1.0.tgz}
+    engines: {node: '>=10'}
     dev: true
