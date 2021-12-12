@@ -4,7 +4,8 @@
   "private": true,
   "description": "Koa2 Webpack5 项目",
   "scripts": {
-    "dev": "node ./scripts/dev-server.js"
+    "dev": "node ./scripts/dev-server.js",
+    "build": "node ./scripts/build.js"
   },
   "author": "maomao1996 <1714487678@qq.com>",
   "repository": {
@@ -30,6 +31,7 @@
     "dotenv": "^10.0.0",
     "html-webpack-plugin": "^5.5.0",
     "koa": "^2.13.4",
+    "ora": "^5.4.1",
     "postcss-loader": "^6.2.1",
     "react-refresh": "^0.11.0",
     "style-loader": "^3.3.1",
